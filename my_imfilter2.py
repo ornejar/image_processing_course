@@ -88,8 +88,8 @@ def my_imfilter(s, filter_type, pad_type='valid'):
 
 # Example usage:
 # Replace 'grayscale_array' with the array obtained from the previous step
-filter_type = 'laplacian'  # Choose 'sharpen' or 'smooth'
-pad_type = 'mirror'  # Choose 'valid', 'zero', or 'mirror'
+filter_type = 'smooth'  # Choose 'sharpen' or 'smooth'
+pad_type = 'zero'  # Choose 'valid', 'zero', or 'mirror'
 # Create a simple averaging filter
 averaging_filter = np.ones((3, 3)) / 9.0
 
