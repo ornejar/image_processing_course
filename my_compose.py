@@ -55,3 +55,37 @@ plt.title('Original s2')
 plt.subplot(1, 3, 3)
 plt.imshow(combined_image, cmap='gray')
 plt.title('combined')
+plt.show()
+def are_images_identical(image1, image2):
+    """
+    Compare two images pixel by pixel and check if they are identical.
+
+    Args:
+    image1 (numpy.ndarray): First image as a NumPy array.
+    image2 (numpy.ndarray): Second image as a NumPy array.
+
+    Returns:
+    bool: True if the images are identical, False otherwise.
+    """
+    # Ensure the images have the same shape
+    if image1.shape != image2.shape:
+        return False
+
+    # Compare each pixel of the two images
+    comparison = np.all(image1 == image2)
+
+    return comparison
+
+# Example usage:
+image_path1 = 's1.jpg'
+image_path2 = 's2.jpg'
+
+image1 = np.array(Image.open(image_path1))
+image2 = np.array(Image.open(image_path2))
+
+identical = are_images_identical(image1, image2)
+
+if identical:
+    print("The images are identical (possibly fake).")
+else:
+    print("The images are not identical.")

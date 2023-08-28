@@ -74,7 +74,7 @@ original_image = load_image(image_path)
 # Check the shape of the original image array
 print(original_image.shape)
 
-filter_type = 'laplacian'  # Choose 'sharpen', 'smooth', or 'laplacian'
+filter_type = 'smooth'  # Choose 'sharpen', 'smooth', or 'laplacian'
 pad_type = 'replicate'  # Choose 'zero', 'replicate', or 'reflect'
 
 # Apply the filter using the my_imfilter function
